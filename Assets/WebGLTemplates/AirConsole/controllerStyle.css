@@ -1,0 +1,55 @@
+        body {
+            padding: 20px;
+            font-family: Helvetica;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 1px;
+        }
+
+        .label {
+            font-weight: bold;
+            text-align: center;
+            color: white;
+        }
+
+        .token {
+            position: absolute;
+            background: blue;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        .box {
+            display: flex;
+            border-radius: 3px;
+            border-width: 2px;
+            border-style: solid;
+            padding: 20px 0px 20px 0px;
+            font-size: 14px;
+            align-content: center;
+            justify-content: center;
+            background-color: white;
+        }
+
+        .waitingMessage {
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            text-align: center;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -ms-transform: translateX(50%);
+            transform: translateX(50%);
+        }
+
+        .nameMessage {
+            text-align: center;
+        }
+
+        .bingoButton {
+            display: none;
+        }
