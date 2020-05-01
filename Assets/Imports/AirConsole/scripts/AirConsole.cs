@@ -211,7 +211,7 @@ namespace NDream.AirConsole {
 		/// </summary>
 		/// <param name="data">The message to send.</param>
 		public void Broadcast (object data) {
-			
+            
 			if (!IsAirConsoleUnityPluginReady ()) {
 				throw new NotReadyException ();
 			}

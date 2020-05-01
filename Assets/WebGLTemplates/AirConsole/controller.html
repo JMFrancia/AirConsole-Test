@@ -9,19 +9,23 @@
     <link rel="stylesheet" type=text/css href="controllerStyle.css"></link>
 </head>
 <body onload="window.app = new App()">
-    <div id="nameScreen" class="view default-view">
-        <div id="nameMessage">
-            Please enter your name
+    <div id="nameScreen" class="default-view view">
+        <div class="centeredContainer">
+            <div class="messageText">
+                Please enter your name
+            </div>
+            <br><br>
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" />
+            <br><br>
+            <input type="submit" onclick="javascript:submitName()" value="Enter" />
         </div>
-        <br><br>
-        <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput" />
-        <br><br>
-        <input type="submit" onclick="javascript:submitName()" value="Enter" />
     </div>
     <div id="waitingScreen" class="view">
-        <div class="waitingMessage">
-            Waiting for game to begin...
+        <div class="centeredContainer">
+            <div class="messageText">
+                Waiting for game to begin...
+            </div>
         </div>
     </div>
     <div id="gameoverScreen" class="view">
@@ -37,7 +41,7 @@
             <div class="label"> G</div>
             <div class="label"> O</div>
         </div>
-        <div class="bingoButtonContainer">
+        <div class="centeredContainer">
             <button type="button" id="bingoButton" onclick="tryCallBingo()">Call Bingo!</button> 
         </div>
     </div>

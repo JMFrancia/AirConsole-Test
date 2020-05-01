@@ -82,9 +82,18 @@ public class GameLogic : MonoBehaviour
 
     void SetName(int deviceId, string name) {
         names[deviceId] = name;
-        if (!gameStarted && names.Count >= minPlayers)
+
+        if (gameStarted)
         {
-            StartGame();
+            AirConsole.instance.Message(deviceId, new {
+                message_type = MessageTypes.SET_GAME_STATE,
+                state = GameStates.PLAYING
+            });
+        }
+        else {
+            if (names.Count >= minPlayers) {
+                StartGame();
+            }
         }
     }
 

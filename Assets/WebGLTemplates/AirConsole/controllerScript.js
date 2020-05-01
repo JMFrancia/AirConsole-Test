@@ -40,7 +40,10 @@ function App() {
     if (data["message_type"] == 6) {
       setGameState(data["state"]);
       if ("autoplay" in data) {
-        autoplay = data["autoplay"];
+          autoplay = data["autoplay"];
+          if (autoplay) {
+              tryPlaceToken(cellsDict["FREE"]);
+          }
       }
     }
   };

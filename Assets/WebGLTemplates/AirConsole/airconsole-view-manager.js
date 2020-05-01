@@ -107,7 +107,7 @@ AirConsoleViewManager.prototype = {
   show: function(id) {
     var state = false;
     if (this.current_view.self !== id) {
-      var view = this.views[id];
+        var view = this.views[id];
       if (view) {
         this.current_view.self = id;
         this.hideAll();
@@ -124,7 +124,7 @@ AirConsoleViewManager.prototype = {
    * Hides all views
    */
   hideAll: function() {
-    for (var key in this.views) {
+      for (var key in this.views) {
       this.views[key].style.display = "none";
     }
   }
